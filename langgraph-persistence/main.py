@@ -58,7 +58,13 @@ snapshot = graph.get_state(config)
 
 # print(snapshot.values)
 
-history = graph.get_state_history(config)
 
-for h in history:
-    print(h.values)
+history = list(graph.get_state_history(config))
+
+# for h in history:
+#     print(h.config["configurable"]["checkpoint_id"], h.next)
+
+
+
+replay_config = {"configurable": {"thread_id":1,"checkpoint_id":"1f100748-bbc3-66e3-8001-6f2abce03ca2"}}
+graph.invoke(None, config=replay_config)
