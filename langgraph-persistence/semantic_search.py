@@ -53,7 +53,7 @@ print(results[0].value)
 #     namespace = (user_id, "memories")
 
 #     # ... Analyze conversation and create a new memory
-
+    
 #     # Create a new memory ID
 #     memory_id = str(uuid.uuid4())
 
